@@ -1,0 +1,22 @@
+body {
+    background-color: #c4c5c8;
+}
+
+h2 {
+    color: #007bff;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 10px 0;
+    background-color: #343a40;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
