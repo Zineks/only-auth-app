@@ -40,6 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ]);
 
             if ($newUserId) {
+                $_SESSION['user_id'] = $newUserId;
                 $_SESSION['user_name'] = $name;
 
                 header("Location: index.php?page=dashboard");

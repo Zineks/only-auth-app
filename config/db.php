@@ -82,3 +82,21 @@ function insert($table, $params) {
     return $pdo->lastInsertId();
 }
 
+
+function update($table, $id, $params) {
+    global $pdo;
+
+    $setParts = [];
+    foreach ($params as $key => $value) {
+        $setParts[] = "$key = :$key";
+    }
+    $setString = implode(", ", $setParts);
+
+    $sql = "UPDATE $table SET $setString WHERE id = :id";
+
+    $query = $pdo->prepare($sql);
+
+    $params['id'] = $id;
+
+    $query->execute($params);
+}
