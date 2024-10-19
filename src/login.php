@@ -1,5 +1,5 @@
 <div class="container">
-    <form action="login.php" method="POST">
+    <form action="" method="POST">
         <h2 class="mb-3">Авторизация</h2>
         <div class="mb-3">
             <label for="login" class="form-label">Email или телефон</label>

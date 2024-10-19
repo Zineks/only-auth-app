@@ -1,0 +1,10 @@
+{
+    "name": "authapp/auth-app",
+    "description": "Auth app for Only",
+    "autoload": {
+        "psr-4": {
+            "Authapp\\AuthApp\\": "src/"
+        }
+    },
+    "require": {}
+}

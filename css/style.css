@@ -20,3 +20,15 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.input-password {
+    position: relative;
+}
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+}

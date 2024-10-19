@@ -1,6 +1,6 @@
 <div class="container">
     <form action="profile.php" method="POST">
-        <h2>Ваш профиль</h2>
+        <h2 class="mb-3">Ваш профиль</h2>
         <div class="mb-3">
             <label for="name" class="form-label">Имя</label>
             <input type="text" class="form-control" id="name" name="name" value="" required>

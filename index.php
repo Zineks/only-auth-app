@@ -13,6 +13,11 @@ $pages = [
     'logout' => 'src/logout.php',
 ];
 
+$stmt = $pdo->query('SELECT * FROM users');
+while ($row = $stmt->fetch()) {
+    echo $row['email'];  // Выведет почтовые адреса всех пользователей
+}
+
 include_once isset($pages[$page]) ? $pages[$page] : $pages['login'];
 
 include_once 'includes/footer.php';

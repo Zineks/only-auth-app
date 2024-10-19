@@ -1,4 +1,3 @@
-<!-- includes/header.php -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
