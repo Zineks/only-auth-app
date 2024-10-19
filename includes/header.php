@@ -16,18 +16,21 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+                    <?php if (isset($_SESSION['user_name'])): ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.php?page=profile">Профиль</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="../index.php?page=logout">Выйти</a>
+                    </li>
+                    <?php else: ?>
                     <li class="nav-item">
                         <a class="nav-link" href="../index.php?page=login">Авторизация</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../index.php?page=register">Регистрация</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.php?page=dashboard">Профиль</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-danger" href="../src/logout.php">Выйти</a>
-                    </li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>

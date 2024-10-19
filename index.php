@@ -3,7 +3,13 @@ session_start();
 include_once 'config/db.php';
 include_once 'includes/header.php';
 
-$page = isset($_GET['page']) ? $_GET['page'] : 'login';
+$isLoggedIn = isset($_SESSION['user_name']);
+
+if (isset($_GET['page'])) {
+    $page = $_GET['page'];
+} else {
+    $page = $isLoggedIn ? 'dashboard' : 'login';
+}
 
 $pages = [
     'register' => 'src/register.php',
@@ -13,9 +19,14 @@ $pages = [
     'logout' => 'src/logout.php',
 ];
 
-$stmt = $pdo->query('SELECT * FROM users');
-while ($row = $stmt->fetch()) {
-    echo $row['email'];  // Выведет почтовые адреса всех пользователей
+include_once isset($pages[$page]) ? $pages[$page] : $pages['login'];
+
+if ($isLoggedIn && ($page === 'login' || $page === 'register')) {
+    header("Location: index.php?page=dashboard");
+    exit();
+} elseif (!$isLoggedIn && $page === 'dashboard') {
+    header("Location: index.php?page=login");
+    exit();
 }
 
 include_once isset($pages[$page]) ? $pages[$page] : $pages['login'];

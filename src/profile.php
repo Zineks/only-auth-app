@@ -1,5 +1,7 @@
+
+
 <div class="container">
-    <form action="profile.php" method="POST">
+    <form action="" method="POST">
         <h2 class="mb-3">Ваш профиль</h2>
         <div class="mb-3">
             <label for="name" class="form-label">Имя</label>
