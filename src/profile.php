@@ -28,7 +28,8 @@
                 'name' => $name,
                 'phone_number' => $phone_number,
                 'email' => $email,
-                'password' => password_hash($new_password, PASSWORD_DEFAULT)
+                'password' => password_hash($new_password, PASSWORD_DEFAULT),
+                'updated_at' => date('Y-m-d H:i:s')
             ];
 
             update('users', $_SESSION['user_id'], $params);
