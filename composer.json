@@ -6,5 +6,7 @@
             "Authapp\\AuthApp\\": "src/"
         }
     },
-    "require": {}
+    "require": {
+      "ext-curl": "*"
+    }
 }
